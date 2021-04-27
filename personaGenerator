@@ -1,0 +1,36 @@
+ //stats, looks, traits
+    var finalText = 'Before you stood a AGE GENDER, he/she is BUILD, as you observing HIM/HER, you EXPRESSION because HE/SHE looks LOOK. Gathering yourself, you approach this person for small talk';
+    var age = ['young', 'mature', 'old'];
+    var gender = ['men', 'women'];
+    var build = ['an average looking', 'bulky as heck', 'fit'];
+    var expression = ['frown', 'in awe', 'speechless'];
+    var look = ['terrible', 'godlike', 'good', 'marvelous'];
+    var pronounce = ['he', 'she'];
+
+
+    function random(min,max) {
+    return Math.random() * (max-min) + min;
+    }
+
+    function variant(word) {
+    let r = random(0, word.length-1);
+    r=Math.round(r);
+    return word[r];
+    }
+
+    function generatePerson(personaId) {
+    let ageX = variant(age);
+    let genderX = variant(gender);
+    let buildX = variant(build);
+    let expressionX = variant(expression);
+    let lookX = variant(look);
+
+    let prncne = '';
+
+    genderX == 'men' ? prncne = 'he' : prncne = 'she';
+
+    return "Before you stood " + ageX + ' ' + genderX + ' ' + prncne +' is ' + buildX ;
+    }
+
+    var id0;
+    console.log(generatePerson(id0));
