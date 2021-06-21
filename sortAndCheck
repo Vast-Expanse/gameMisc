@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+
+<script>
+
+    let resultObj =[];
+
+
+function getRandomInt(min, max) {
+        let result;
+    min = Math.ceil(min);
+    max = Math.floor(max);
+
+    result =  Math.floor(Math.random() * (max - min + 1)) + min;
+resultObj.push(result);
+}
+
+
+
+
+
+function doXtime(x) {
+        for(let i=0; i<x; i++) {
+            getRandomInt(1,10);
+        }
+}
+
+doXtime(10000);
+
+    console.log(resultObj);
+
+
+
+
+    resultObj.sort(function (a,b) {
+        return a - b });
+    console.log(resultObj);
+
+
+    function kek(someObj) {
+        let step = someObj.length;
+        let counter = 0;
+        let second = 0;
+
+        for(let i = 0; i< step; i++) {
+
+
+
+            if(someObj[i] == someObj[second+1] )
+            {
+                i--;
+                second++;
+            }else {
+                counter++;
+                console.log( someObj[i]);
+
+
+            }
+
+        }
+
+
+    }
+
+    kek(resultObj);
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
