@@ -1,0 +1,40 @@
+window.showDivFadeIn=function(elementId,timeBeforeShow,fadeInTime) {
+let id = "#" + elementId;
+setTimeout(
+function () {
+$(id).fadeIn(fadeInTime);
+}, timeBeforeShow
+);
+};
+///----------------------------------------------------------------
+window.startConversation=function() {
+let s = "#conversation";
+$(s).show();
+$(mainContent).hide();
+$(navigationBox).show();
+};
+///----------------------------------------------------------------
+window.endConversation=function() {
+let s = "#conversation";
+$(s).hide();
+$(mainContent).show();
+$(navigationBox).show();
+};
+///-------------------------------------------------------------------
+window.showDiv=function() {
+let step =0;
+let tempArgument;
+while(arguments[step]){
+let itemToHide = "#"+arguments[step];
+$(itemToHide).show();
+step++;
+}};
+///-------------------------------------------------------------------
+window.hideDiv=function() {
+let step =0;
+let tempArgument;
+while(arguments[step]){
+let itemToHide = "#"+arguments[step];
+$(itemToHide).hide();
+step++;
+}};
