@@ -1,0 +1,12 @@
+    window.upgradehandler=function(price,zone,upgradenum) {
+        if(State.variables.money<price) {
+            let a = `<div class="popup-no-money">Insufficient funds ⛃</div>`;
+            $("#story").append(a);
+            $(".popup-no-money").hide().fadeIn(300).fadeOut(2500, function () {
+                $(this).remove();
+            });
+        }
+    };
+    
+    
+    //else
